@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class Anarc09b {
+class Anarc09b {
 
 	public static void main(String[] args) {
 		long W,H;
@@ -18,7 +18,9 @@ public class Anarc09b {
 	{
 		long res = (W>H)?gcd(W,H):gcd(H,W);
 		long lcm = (W*H)/res;
-		long ans = (lcm*lcm)/(W*H);
+		long a = lcm/W;
+		long b = lcm/H;
+		long ans = a*b;
 		System.out.println(ans);
 	}
 	static long gcd(long q, long w)
